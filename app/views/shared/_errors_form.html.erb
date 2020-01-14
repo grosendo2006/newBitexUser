@@ -1,0 +1,14 @@
+<% if @user_form.errors.any? %>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="alert alert-danger">
+        <strong><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Hay Errores !</strong><br>
+          <% @user_form.errors.values.each do |attribute, error| %>
+            <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+            <%= attribute %>
+            <br>
+          <% end %>
+      </div>
+    </div>
+  </div>
+<% end %>

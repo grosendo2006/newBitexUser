@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bitex</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body class="skin-blue sidebar-mini">
+  <!-- Site wrapper -->
+
+  <div class="wrapper">
+
+    <%= render partial: 'shared/main_header' %>
+
+    <%= render partial: 'shared/lateral_menu' %>
+
+
+    <!-- =============================================== -->
+
+    <!-- Right side column. Contains the navbar and content of the page -->
+    
+    <div class="content-wrapper">
+
+      <!-- Main content -->
+      <section class="content">
+        <div id="modal-holder"></div>
+        <section id="replace_content">
+          <%#= render partial: 'shared/flash_notice' %>
+
+          <%= yield %>
+        </section>
+      </section><!-- /.content -->
+    </div><!-- /.content-wrapper -->
+
+    <footer class="main-footer">
+      <div class="pull-right hidden-xs">
+        <b>Bitex</b>
+      </div>
+    </footer>
+
+    <%#= render partial: 'shared/control_sidebar' %>
+
+  </div><!-- ./wrapper -->
+</body>
+
+
+</html>
